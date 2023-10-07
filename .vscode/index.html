@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" 
+    crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/99f391c5cd.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" 
+    crossorigin="anonymous"/>
+    <title> IG feed using Bootstrap</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <!-- Logo -->
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/87/87390.png"
+          alt="Logo"
+          width="30"
+          height="30"
+          class="d-inline-block align-text-top"
+        />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="Logo" width="80" height="30" class="d-inline-block align-text-top img-fluid" loading="lazy">
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNavDropdown"
+      >
+        <ul class="navbar-nav">
+          <!-- Post button -->
+          <li class="nav-item bg-success rounded me-2">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#modalsito"
+            >
+              Create a new post
+            </button>
+            <div
+              class="modal fade"
+              id="modalsito"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <!-- Modal -->
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Create a new post
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="mb-3">
+                      <label
+                        for="exampleFormControlTextarea1"
+                        class="form-label"
+                        >Caption</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="exampleFormControlTextarea1"
+                        rows="3"
+                        placeholder="Add the caption of your post here"
+                      ></textarea>
+                      <button
+                        type="button"
+                        class="btn btn-secondary mt-2 me-2 bg-body-tertiary"
+                      >
+                        <a href="#" role="button">
+                          <img src="camara.png" width="25" height="25" />
+                        </a>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-secondary mt-2 me-2 bg-body-tertiary"
+                      >
+                        <a href="#" role="button">
+                          <img src="mapa.png" width="25" height="25" />
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-success">
+                      Publish
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+            <!-- Dropdown button -->
+            <li class="nav-item dropdown d-flex bg-secondary rounded">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+              <i class="fas fa-cog"></i>
+              </a>
+              <!-- Dropdown options -->
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Privacy and Data</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-danger" href="#">Log out</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <!--Modal to create a post button-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- nav bar pills--> 
+
+<ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active bg-light text-dark mr-1" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"> <i class="fas fa-th"></i> </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link bg-light text-dark mr-1" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"> <i class="fas fa-square"></i> </button>
+  </li>
+</ul>
+
+<div class="tab-content" id="pills-tabContent">
+  <!-- grid view-->
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+    <div class="card-group">
+      <div class="card card m-2 border-0">
+        <img src="https://picsum.photos/id/238/400/300" class="card-img" alt="...">
+      </div>
+      <div class="card card m-2 border-0">
+        <img src="https://picsum.photos/id/291/400/300" class="card-img" alt="...">
+      </div>
+      <div class="card card m-2 border-0">
+        <img src="https://picsum.photos/id/247/400/300" class="card-img" alt="...">
+      </div>
+    </div>
+    <div class="card-group">
+      <div class="card card m-2 border-0">
+        <img src="https://picsum.photos/id/261/400/300" class="card-img" alt="...">
+      </div>
+      <div class="card card m-2 border-0">
+        <img src="https://picsum.photos/id/272/400/300" class="card-img" alt="...">
+      </div>
+      <div class="card card m-2 border-0">
+        <img src="https://picsum.photos/id/223/400/300" class="card-img" alt="...">
+      </div>
+    </div>
+  </div>
+  <!-- end of grid view-->
+  <!-- column view-->
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+      <div class="cointainer d-flex flex-column align-items-center">
+        <div class="card" style="width: 25rem;">
+          <div class="card-header d-flex justify-content-between pt-3">
+            <p>Some random post</p>
+            <p>On a random day</p>
+          </div>
+          <img src="https://picsum.photos/id/261/400/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Some random place</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellat delectus possimus in mollitia porro incidunt temporibus dolor ipsam fugiat.</p>
+          </div>
+        </div>
+        <div class="card" style="width: 25rem;">
+          <div class="card-header d-flex justify-content-between pt-3">
+            <p>Some random post</p>
+            <p>On a random day</p>
+          </div>
+          <img src="https://picsum.photos/id/261/400/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Some random place</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellat delectus possimus in mollitia porro incidunt temporibus dolor ipsam fugiat.</p>
+          </div>
+        </div>
+        <div class="card" style="width: 25rem;">
+          <div class="card-header d-flex justify-content-between pt-3">
+            <p>Some random post</p>
+            <p>On a random day</p>
+          </div>
+          <img src="https://picsum.photos/id/261/400/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Some random place</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellat delectus possimus in mollitia porro incidunt temporibus dolor ipsam fugiat.</p>
+          </div>
+        </div>
+        <div class="card" style="width: 25rem;">
+          <div class="card-header d-flex justify-content-between pt-3">
+            <p>Some random post</p>
+            <p>On a random day</p>
+          </div>
+          <img src="https://picsum.photos/id/261/400/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Some random place</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellat delectus possimus in mollitia porro incidunt temporibus dolor ipsam fugiat.</p>
+          </div>
+        </div>
+        <div class="card" style="width: 25rem;">
+          <div class="card-header d-flex justify-content-between pt-3">
+            <p>Some random post</p>
+            <p>On a random day</p>
+          </div>
+          <img src="https://picsum.photos/id/261/400/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Some random place</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellat delectus possimus in mollitia porro incidunt temporibus dolor ipsam fugiat.</p>
+          </div>
+        </div>
+        <div class="card" style="width: 25rem;">
+          <div class="card-header d-flex justify-content-between pt-3">
+            <p>Some random post</p>
+            <p>On a random day</p>
+          </div>
+          <img src="https://picsum.photos/id/261/400/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Some random place</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellat delectus possimus in mollitia porro incidunt temporibus dolor ipsam fugiat.</p>
+          </div>
+        </div>
+      </div>
+  </div>
+  <!--column view end-->
+</div>
+</div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+      integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+      crossorigin="anonymous"></script>
+</body>
+</html>
